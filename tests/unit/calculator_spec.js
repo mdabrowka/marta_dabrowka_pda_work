@@ -25,5 +25,19 @@ describe('calculator', function () {
     assert.equal(result, 505)
   })
 
+  // it('should save a negative number', function() {
+  //   calculator.operatorClick('-')
+  //   calculator.numberClick(5)
+  //   result = calculator.runningTotal;
+  //   assert.equal(result, (-5))
+  // })
+
+  it('should clear the slate with a clearClick', function() {
+    calculator.runningTotal = 100
+    calculator.clearClick()
+    result = calculator.runningTotal
+    assert.equal(result, 0)
+  })
+
 
 });
