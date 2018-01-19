@@ -66,5 +66,15 @@ describe('calculator', function () {
     assert.equal(result, 25)
   })
 
+  it('should divide 30 by 6 and return 5', function(){
+    calculator.numberClick(3)
+    calculator.numberClick(0)
+    calculator.operatorClick('/')
+    calculator.numberClick(6)
+    calculator.operatorClick('=')
+    result = calculator.runningTotal
+    assert.equal(result, 5)
+  })
+
 
 });
