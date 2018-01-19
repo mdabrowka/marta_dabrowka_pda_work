@@ -15,7 +15,14 @@ describe('calculator', function () {
     calculator.numberClick(5)
     result = calculator.runningTotal;
     assert.equal(result, 5);
+  })
 
+  it('it should save a 3 digit number', function() {
+    calculator.numberClick(5)
+    calculator.numberClick(0)
+    calculator.numberClick(5)
+    result = calculator.runningTotal;
+    assert.equal(result, 505)
   })
 
 
