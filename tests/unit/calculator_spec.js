@@ -39,5 +39,14 @@ describe('calculator', function () {
     assert.equal(result, 0)
   })
 
+  it('should end with 5 when 2 and 3 are added', function() {
+    calculator.numberClick(2)
+    calculator.operatorClick('+')
+    calculator.numberClick(3)
+    calculator.operatorClick('=')
+    result = calculator.runningTotal
+    assert.equal(result, 5)
+  })
+
 
 });
