@@ -11,4 +11,12 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
+  it('it should save number 5', function() {
+    calculator.numberClick(5)
+    result = calculator.runningTotal;
+    assert.equal(result, 5);
+
+  })
+
+
 });
