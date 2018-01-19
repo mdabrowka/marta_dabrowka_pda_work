@@ -48,5 +48,14 @@ describe('calculator', function () {
     assert.equal(result, 5)
   })
 
+  it('should subtract 5 - 1 and return 4', function() {
+    calculator.numberClick(5)
+    calculator.operatorClick('-')
+    calculator.numberClick(1)
+    calculator.operatorClick('=')
+    result = calculator.runningTotal
+    assert.equal(result, 4)
+  })
+
 
 });
