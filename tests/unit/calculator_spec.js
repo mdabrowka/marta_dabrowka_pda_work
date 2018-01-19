@@ -57,5 +57,14 @@ describe('calculator', function () {
     assert.equal(result, 4)
   })
 
+  it('should multiply 5 * 5 and return 25', function(){
+    calculator.numberClick(5)
+    calculator.operatorClick('*')
+    calculator.numberClick(5)
+    calculator.operatorClick('=')
+    result = calculator.runningTotal
+    assert.equal(result, 25)
+  })
+
 
 });
