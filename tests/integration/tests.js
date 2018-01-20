@@ -46,4 +46,13 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('6')
   })
 
+  it('should update the display of the running total with the result of multiplying 3 and 4', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number3')).click();
+    element(by.css('#operator_multiply')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('12')
+  })
+
 });
