@@ -129,4 +129,16 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('8')
   })
 
+  it('should update the display of the running total with the result of chain operation of subtraction and division on negative numbers', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number9')).click();
+    element(by.css('#operator_subtract')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number7')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number8')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('-1')
+  })
+
 });
